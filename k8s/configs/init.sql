@@ -20,7 +20,7 @@ create table comment (
 );
 
 create table policy (
-    category tinyint check (category between 0 and 3),
+    category varchar(255) check (category in ('ACTIVITY_SUPPORT','COMPETENCY_DEVELOPMENT','LIVING_SUPPORT','CAREER_SUPPORT')),
     hate_rate integer not null,
     like_rate integer not null,
     created_date timestamp(6),
