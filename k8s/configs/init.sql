@@ -6,8 +6,8 @@ FLUSH PRIVILEGES;
 
 USE `krampoline`;
 
--- drop table if exists comment cascade;
--- drop table if exists policy cascade;
+drop table if exists comment;
+drop table if exists policy;
 
 create table comment (
     created_date timestamp(6),
