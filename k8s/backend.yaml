@@ -29,6 +29,15 @@ spec:
             httpGet:
               path: /api/test
               port: 8080
+          volumeMounts:
+            - name: chatgpt
+              mountPath: "/etc/chatgpt"
+              readOnly: true
+      volumes:
+      - name: chatgpt
+        secret:
+          secretName: my-secret
+          optional: false
 ---
 apiVersion: v1
 kind: Service
